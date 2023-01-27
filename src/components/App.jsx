@@ -25,7 +25,7 @@ export const App = () => {
         break;
 
       default:
-        alert('Error');
+        console.error('error');
     }
   };
 
