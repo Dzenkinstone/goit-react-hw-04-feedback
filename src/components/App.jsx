@@ -23,6 +23,9 @@ export const App = () => {
       case 'bad':
         setBad(bad => bad + 1);
         break;
+
+      default:
+        alert('Error');
     }
   };
 
