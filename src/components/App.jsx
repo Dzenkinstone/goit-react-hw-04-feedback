@@ -9,6 +9,7 @@ export const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+  const allFeedback = ['good', 'neutral', 'bad'];
 
   const onFeedbackChange = type => {
     switch (type) {
@@ -40,7 +41,10 @@ export const App = () => {
 
   return (
     <Section title="Please leave feedback">
-      <FeedbackOptions onLeaveFeedback={onFeedbackChange} />
+      <FeedbackOptions
+        allFeedback={allFeedback}
+        onLeaveFeedback={onFeedbackChange}
+      />
       <Statistics
         good={good}
         neutral={neutral}
